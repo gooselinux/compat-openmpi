@@ -1,0 +1,7 @@
+%_openmpi_psm_load \
+ . /etc/profile.d/modules.sh; \
+ module load openmpi-psm-%{_arch}; \
+ export CFLAGS="$CFLAGS %{optflags}";
+%_openmpi_psm_unload \
+ . /etc/profile.d/modules.sh; \
+ module unload openmpi-psm-%{_arch};
